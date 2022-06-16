@@ -1,21 +1,9 @@
-// Later on this file will be used to connect to
-// MongoDB
-// But for now use will declare some arrays and fake
-// a DB using arrays
+const mongoose = require('mongoose');
 
-const users = [
-  {
-    id: 1,
-    name: 'George'
-  },
-  {
-    id: 2,
-    name: 'Ram'
-  },
-  {
-    id: 3,
-    name: 'Venkat'
-  }
-];
+function initDB() {
+  mongoose.connect(
+    'mongodb+srv://george1:Pass123@cluster0.zehn2.mongodb.net/crampetedb1?retryWrites=true&w=majority'
+  );
+}
 
-module.exports = users;
+module.exports = initDB;
